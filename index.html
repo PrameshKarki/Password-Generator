@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h3>Password Generator</h3>
+            <div class="showPassword">
+                <input type="text" name="password" id="password" placeholder="Password" disabled>
+                <span id="copy">Copy</span>
+            </div>
+            <div class="options">
+                <div class="wrapper">
+
+                    <label for="passwordLength">Password Length</label>
+                    <div class="range">
+                        <input type="range" name="Password Length" id="passwordLength" min=4 max=12 step=1 value=4>
+                        <span id="showValue">4</span>
+                    </div>
+                </div>
+                <div class="wrapper">
+
+                    <label for="uppercase">Uppercase</label>
+                    <label class="customCheckBox">
+                        <input type="checkbox" name="Uppercase" id="uppercase">
+                        <span></span>
+                        <i class="indicator"></i>
+
+                    </label>
+                </div>
+                <div class="wrapper">
+
+                    <label for="lowercase">Lowercase</label>
+                    <label class="customCheckBox">
+                        <input type="checkbox" name="Lowercase" id="lowercase">
+                        <span></span>
+                        <i class="indicator"></i>
+
+                    </label>
+                </div>
+                <div class="wrapper">
+
+                    <label for="uppercase">Numbers</label>
+                    <label class="customCheckBox">
+                        <input type="checkbox" name="Numbers" id="numbers">
+                        <span></span>
+                        <i class="indicator"></i>
+
+                    </label>
+                </div>
+                <div class="wrapper">
+                    <label for="specialCharacters">Special Characters</label>
+                    <label class="customCheckBox">
+                        <input type="checkbox" name="Special Characters" id="specialCharacters">
+                        <span></span>
+                        <i class="indicator"></i>
+
+                    </label>
+
+                </div>
+                <button id="btn">Generate Password</button>
+
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <p class="right">✓</p>
+                <p class="success">Successfully Copied</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<!-- Pramesh Karki -->

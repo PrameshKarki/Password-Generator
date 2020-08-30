@@ -1,0 +1,180 @@
+/* #stopUsingPx */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+html {
+  font-size: 62.5%;
+  /* i.e 1rem=10px */
+}
+body {
+  overflow: hidden;
+}
+section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 50rem;
+  border: 0.1rem solid black;
+  padding: 1.2rem;
+}
+.container h3 {
+  font-size: 3rem;
+  text-align: center;
+}
+.showPassword {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.range {
+  margin-right: 1.8rem;
+  font-size: 2.4rem;
+}
+input[type="text"] {
+  font-size: 2rem;
+  padding: 0.2rem 0.5rem;
+}
+#copy {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  opacity: 0.9;
+  transition: 0.2s;
+}
+#copy:hover {
+  opacity: 1;
+}
+.options {
+  margin-top: 3rem;
+}
+.options div.wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+#btn {
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  border: none;
+  outline: none;
+  background: black;
+  color: white;
+  font-size: 2.2rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+#btn:hover {
+  opacity: 1;
+}
+
+/* For custom chcekbox */
+label.customCheckBox {
+  position: relative;
+}
+label.customCheckBox input {
+  appearance: none;
+  display: none;
+}
+label.customCheckBox span {
+  display: block;
+  position: relative;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 4rem;
+  box-shadow: inset 0 0.2rem 1.5rem rgba(0, 0, 0, 0.2),
+    inset 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2),
+    inset 0 -0.1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+label.customCheckBox .indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #000;
+  transition: 0.5s;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5),
+    inset 0 0.1rem 0.1rem rgba(255, 255, 255, 0.1);
+  transform: scale(0.9);
+  cursor: pointer;
+}
+label.customCheckBox input:checked ~ .indicator {
+  left: 3rem;
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: height 0.8s;
+  opacity: 0;
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  background: white;
+  width: 35rem;
+  height: 20rem;
+}
+.modal-content p.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  font-size: 5.8rem;
+  border: 0.1rem solid black;
+  border-radius: 50%;
+}
+.modal-content p.success {
+  font-size: 2.5rem;
+  margin-top: 0.8rem;
+}
+
+@media only screen and (max-width: 425px) {
+  section {
+    align-items: flex-start;
+  }
+  .container {
+    margin-top: 3rem;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+
+/* Pramesh Karki */
